@@ -79,3 +79,153 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); display: flex;
   .project-card { min-height: 220px; }
   footer { flex-direction: column; gap: 8px; }
 }
+/* =========================
+   SELECTED WORK
+   ========================= */
+
+.project-list {
+  display: grid;
+  gap: 0;
+  max-width: none;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 34px;
+  padding: 58px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-card:first-child {
+  padding-top: 0;
+}
+
+.project-card:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-number {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: var(--accent);
+  padding-top: 9px;
+}
+
+.project-main {
+  max-width: 760px;
+}
+
+.project-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.project-topline h2 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  font-weight: 600;
+}
+
+.project-type {
+  flex-shrink: 0;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+}
+
+.project-stack {
+  margin: 14px 0 30px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--accent);
+}
+
+.project-hook {
+  margin: 0 0 16px;
+  max-width: 650px;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  color: var(--text);
+}
+
+.project-description {
+  margin: 0;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.project-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.project-focus span {
+  border: 1px solid var(--line);
+  padding: 7px 10px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 28px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+
+/* Mobile */
+@media (max-width: 720px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 46px 0;
+  }
+
+  .project-number {
+    padding-top: 0;
+  }
+
+  .project-topline {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .project-type {
+    align-self: flex-start;
+  }
+
+  .project-hook {
+    font-size: 19px;
+  }
+}
